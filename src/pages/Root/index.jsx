@@ -30,7 +30,7 @@ import {
 
 const { Header, Content, Footer, Sider } = Layout;
 const items1 = [
-  { key: "1", label: <Link to='/pic'>Hình ảnh</Link>},
+  { key: "1", label: <Link to='/'>Hình ảnh</Link>},
   { key: "2", label:   <Link to='/note'>Ghi chú</Link>},
   { key: "3", label: <Link to='/info' >Thông tin</Link> },
 ];

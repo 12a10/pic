@@ -16,7 +16,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/",
-    element: <NotFound></NotFound>,
+    element: <Root Component={<PictureForFun></PictureForFun>}/>,
     errorElement: <NotFound></NotFound>,
     
   },
