@@ -149,7 +149,7 @@ const Root = ({Component}) => {
         >
           <Content
             style={{
-              padding: "0 24px",
+              padding: "0 10px",
               minHeight: 800,
             }}
           >
