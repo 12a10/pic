@@ -42,7 +42,7 @@ const index = () => {
 
   const renderImgFromYear = (year) => {
     return data[year]?.map((item)=>{
-      return <Image key={item.id} width={200} src={item.imgSrc} />
+      return <Image key={item.id} width={150} src={item.imgSrc} />
      })
   };
 
