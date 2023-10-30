@@ -25,6 +25,45 @@ const data = {
       imgSrc:
         "https://scontent.fsgn10-2.fna.fbcdn.net/v/t39.30808-6/397362884_988588935546598_159253819703341697_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=lrI0Q5NYn34AX_4SHER&_nc_ht=scontent.fsgn10-2.fna&oh=00_AfASZbvUl6FbyXJ5Lpx3KPixErbrAULZ9BiG031GnSLh3g&oe=654396C9",
     },
+    {
+      id:3,
+      title: "Title 1",
+      imgSrc:
+        "https://scontent.fsgn10-1.fna.fbcdn.net/v/t39.30808-6/397331911_988588348879990_4807793489358715737_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=WFQxFXvWWqcAX9Xpi21&_nc_ht=scontent.fsgn10-1.fna&oh=00_AfAcqNYYI0Oo8azFwpXogND1hMO9fJZ0_-Q6R60OtMzbUw&oe=65445A24",
+    },
+    {
+
+      id:4,
+      title: "Title 2",
+      imgSrc:
+        "https://scontent.fsgn10-2.fna.fbcdn.net/v/t39.30808-6/397362884_988588935546598_159253819703341697_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=lrI0Q5NYn34AX_4SHER&_nc_ht=scontent.fsgn10-2.fna&oh=00_AfASZbvUl6FbyXJ5Lpx3KPixErbrAULZ9BiG031GnSLh3g&oe=654396C9",
+    },
+    {
+      id:5,
+      title: "Title 1",
+      imgSrc:
+        "https://scontent.fsgn10-1.fna.fbcdn.net/v/t39.30808-6/397331911_988588348879990_4807793489358715737_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=WFQxFXvWWqcAX9Xpi21&_nc_ht=scontent.fsgn10-1.fna&oh=00_AfAcqNYYI0Oo8azFwpXogND1hMO9fJZ0_-Q6R60OtMzbUw&oe=65445A24",
+    },
+    {
+
+      id:6,
+      title: "Title 2",
+      imgSrc:
+        "https://scontent.fsgn10-2.fna.fbcdn.net/v/t39.30808-6/397362884_988588935546598_159253819703341697_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=lrI0Q5NYn34AX_4SHER&_nc_ht=scontent.fsgn10-2.fna&oh=00_AfASZbvUl6FbyXJ5Lpx3KPixErbrAULZ9BiG031GnSLh3g&oe=654396C9",
+    },
+    {
+      id:7,
+      title: "Title 1",
+      imgSrc:
+        "https://scontent.fsgn10-1.fna.fbcdn.net/v/t39.30808-6/397331911_988588348879990_4807793489358715737_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=WFQxFXvWWqcAX9Xpi21&_nc_ht=scontent.fsgn10-1.fna&oh=00_AfAcqNYYI0Oo8azFwpXogND1hMO9fJZ0_-Q6R60OtMzbUw&oe=65445A24",
+    },
+    {
+
+      id:8,
+      title: "Title 2",
+      imgSrc:
+        "https://scontent.fsgn10-2.fna.fbcdn.net/v/t39.30808-6/397362884_988588935546598_159253819703341697_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=lrI0Q5NYn34AX_4SHER&_nc_ht=scontent.fsgn10-2.fna&oh=00_AfASZbvUl6FbyXJ5Lpx3KPixErbrAULZ9BiG031GnSLh3g&oe=654396C9",
+    },
     // {
     //   title: "Title 3",
     //   imgSrc:
@@ -41,9 +80,28 @@ const index = () => {
   };
 
   const renderImgFromYear = (year) => {
-    return data[year]?.map((item)=>{
-      return <Image key={item.id} width={150} src={item.imgSrc} />
-     })
+
+    return <List
+    grid={{
+      gutter: 16,
+      xs: 1,
+      sm: 2,
+      md: 4,
+      lg: 4,
+      xl: 6,
+      xxl: 3,
+    }}
+    dataSource={data[year]}
+    renderItem={(item) => (
+      <List.Item>
+       <Image key={item.id} src={item.imgSrc} />
+      </List.Item>
+    )}
+  />
+
+
+
+
   };
 
   renderImgFromYear(2015);
@@ -122,7 +180,7 @@ const index = () => {
        }}
      >
        {
-       renderImgFromYear(2015)}
+       renderImgFromYear(year)}
      </Image.PreviewGroup>
       </div>
       
