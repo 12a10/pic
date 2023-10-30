@@ -78,10 +78,21 @@ const index = () => {
       <h3 style={contentStyle}>4</h3>
     </div>
   </Carousel>
-      <Segmented style={{marginTop:'20px'}} size="small" options={segmentOptions} onChange={onChange}/>
-      <List
+    <div 
+    style={{
+      width:"100%"
+    }}
+    
+    >
+    <Segmented style={{
+      marginTop:'20px',       
+    width:"100%",
+    backgroundColor:"#FFFADD"
+}} size="small" options={segmentOptions} onChange={onChange}/>
+    <List
       style={{
-        marginTop:'20px'
+        marginTop:'20px',
+        width:"100%"
       }}
     grid={{
       gutter: 16,
@@ -99,6 +110,8 @@ const index = () => {
       </List.Item>
     )}
   />
+    </div>
+    
     </div>
   )
 }

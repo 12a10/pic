@@ -76,25 +76,25 @@ const Root = ({Component}) => {
   }, []);
 
 
-  useEffect(() => {
-    const userLoggedIn = localStorage.getItem("isLoggedIn");
-    const fetchUserInfo = JSON.parse(localStorage.getItem("accountInfo"));
-    if (fetchUserInfo) {
-      setUserInfo(fetchUserInfo);
-    }
-    if (userLoggedIn === "true") {
-      setIsLoggedIn(true);
-    } else {
-      navigate("/login");
-    }
-  }, [isLoggedIn]);
+  // useEffect(() => {
+  //   const userLoggedIn = localStorage.getItem("isLoggedIn");
+  //   const fetchUserInfo = JSON.parse(localStorage.getItem("accountInfo"));
+  //   if (fetchUserInfo) {
+  //     setUserInfo(fetchUserInfo);
+  //   }
+  //   if (userLoggedIn === "true") {
+  //     setIsLoggedIn(true);
+  //   } else {
+  //     navigate("/login");
+  //   }
+  // }, [isLoggedIn]);
 
-  const handleLogout = () => {
-    localStorage.setItem("isLoggedIn", "false");
-    setIsLoggedIn(false);
-  };
+  // const handleLogout = () => {
+  //   localStorage.setItem("isLoggedIn", "false");
+  //   setIsLoggedIn(false);
+  // };
 
-  return isLoggedIn ? (
+  return (
     <Layout>
       <Header
         style={{
@@ -130,30 +130,6 @@ const Root = ({Component}) => {
           />
         </ConfigProvider>
 
-        <div style={{
-                  display: windowWidth > 768 ? 'inline-block' : 'none', 
-        }}>
-          <span style={{ color: "white", marginRight: "20px" }}>
-            Welcome {`${userInfo?.account}`}{" "}
-          </span>
-          <Badge dot>
-            <Avatar shape="square" icon={<UserOutlined />} />
-          </Badge>
-          <Button
-            style={{
-              width: "100px",
-              height: "100%",
-              border: "none",
-              background: "transparent",
-              color: "white",
-              padding: "0",
-            }}
-            icon={<LogoutOutlined />}
-            onClick={handleLogout}
-          >
-            Logout
-          </Button>
-        </div>
       </Header>
       <Content
         style={{
@@ -168,7 +144,7 @@ const Root = ({Component}) => {
         <Layout
           style={{
             padding: "24px 0",
-            background: "#DADDB1",
+            background: "#FFCC70",
           }}
         >
           <Content
@@ -188,8 +164,8 @@ const Root = ({Component}) => {
         }}
       ></Footer>
     </Layout>
-  ) : (
-    <NotFound />
-  );
+  )
+    
+ 
 };
 export default Root;
