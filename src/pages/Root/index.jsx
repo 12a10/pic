@@ -133,18 +133,18 @@ const Root = ({Component}) => {
       </Header>
       <Content
         style={{
-          padding: "0 5px",
+          // padding: "0 5px",
         }}
       >
         <Breadcrumb
           style={{
-            margin: "5px 0",
+            // margin: "5px 0",
           }}
         ></Breadcrumb>
         <Layout
           style={{
             padding: "24px 0",
-            background: "#FFCC70",
+            background: "#FFFCF9",
           }}
         >
           <Content

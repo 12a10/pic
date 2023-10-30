@@ -159,7 +159,7 @@ const index = () => {
           style={{
             marginTop: "20px",
             width: "100%",
-            backgroundColor: "#FFFADD",
+            backgroundColor: "#FF6978",
           }}
           size="small"
           options={segmentOptions}
