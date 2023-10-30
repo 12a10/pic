@@ -85,8 +85,8 @@ const index = () => {
       }}
     grid={{
       gutter: 16,
-      xs: 1,
-      sm: 2,
+      xs: 3,
+      sm: 3,
       md: 4,
       lg: 6,
       xl: 6,

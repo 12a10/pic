@@ -55,12 +55,26 @@ const items2 = [UserOutlined, LaptopOutlined, NotificationOutlined].map(
 const Root = ({Component}) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userInfo, setUserInfo] = useState("");
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const navigate = useNavigate();
 
   const {
     token: { colorBgContainer },
   } = theme.useToken();
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+  
+    window.addEventListener('resize', handleResize);
+  
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
 
   useEffect(() => {
     const userLoggedIn = localStorage.getItem("isLoggedIn");
@@ -116,7 +130,9 @@ const Root = ({Component}) => {
           />
         </ConfigProvider>
 
-        <div>
+        <div style={{
+                  display: windowWidth > 768 ? 'inline-block' : 'none', 
+        }}>
           <span style={{ color: "white", marginRight: "20px" }}>
             Welcome {`${userInfo?.account}`}{" "}
           </span>
