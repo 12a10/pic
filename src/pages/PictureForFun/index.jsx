@@ -258,10 +258,44 @@ const data = {
       imgSrc:
         "https://scontent.fsgn5-2.fna.fbcdn.net/v/t1.6435-9/35694832_1102097569931066_3239635149234634752_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=4dc865&_nc_ohc=JGATD24EcNUAX-ccjf_&_nc_ht=scontent.fsgn5-2.fna&oh=00_AfBgvQcBcfQYKPq0FXBUTGDQTT-Wl-hWhwnDSfu80Pl-BQ&oe=65678D0E",
     },
+    {
+      id:7,
+      title: "Title 1",
+      imgSrc:
+        "https://b-f17-zpc.zdn.vn/5531576411413041916/78ce393b309ae7c4be8b.jpg",
+    },
 
+  ],
+  2022:[
+    {
+      id:1,
+      title: "Title 1",
+      imgSrc:
+        "https://scontent.fsgn10-2.fna.fbcdn.net/v/t39.30808-6/313431419_3323705264542580_6942892000703590753_n.jpg?stp=cp6_dst-jpg&_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=fYPSei9g58AAX_qe2VV&_nc_ht=scontent.fsgn10-2.fna&oh=00_AfDz9vH8XluTPzn11OF1sG5sVysGHXPOQuV9wTx_FgZwew&oe=65455F0E",
+    },
+    {
+      id:2,
+      title: "Title 1",
+      imgSrc:
+        "https://scontent.fsgn10-2.fna.fbcdn.net/v/t39.30808-6/313975063_3323705444542562_5047835959092065623_n.jpg?stp=cp6_dst-jpg&_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=ykzLGHcpZq4AX9f6dFP&_nc_ht=scontent.fsgn10-2.fna&oh=00_AfBlyXLU19TFUsLd0UD02Tzbtfl644gXHK3s8ODQrKojMw&oe=654577F9",
+    },
+    {
+      id:3,
+      title: "Title 1",
+      imgSrc:
+        "https://scontent.fsgn10-2.fna.fbcdn.net/v/t39.30808-6/314093468_3323705374542569_6613662495819255434_n.jpg?stp=cp6_dst-jpg&_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=Mh0zqdgytEwAX8XIqZS&_nc_ht=scontent.fsgn10-2.fna&oh=00_AfA9ap11HejPtlgG4aqcXpoiRHE_ugEjisjaltY2I0j1pQ&oe=6544658D",
+    },
+    {
+      id:4,
+      title: "Title 1",
+      imgSrc:
+         "https://scontent.fsgn10-2.fna.fbcdn.net/v/t39.30808-6/312923070_3323705411209232_4532523186617815168_n.jpg?stp=cp6_dst-jpg&_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_ohc=w-bu0ZyZOl0AX9ek1Mz&_nc_ht=scontent.fsgn10-2.fna&oh=00_AfAiIYju0sM4ml0egHR3ogOlyUPXJJ-U1xdH2KB5xiohXw&oe=65451045",
+    },
   ]
 
 };
+
+
 const index = () => {
   const [year, setYear] = useState(2015);
   const onChange = (value) => {
