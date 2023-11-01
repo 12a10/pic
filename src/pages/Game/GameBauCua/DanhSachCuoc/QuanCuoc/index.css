@@ -1,0 +1,10 @@
+/* styles.css */
+img {
+    max-width: 100%; /* Ảnh sẽ có độ rộng tối đa là 100% của container cha */
+    height: auto; /* Chiều cao tự động điều chỉnh để duy trì tỷ lệ khung hình */
+  }
+  /* styles.css */
+.image-container {
+    max-width: 100%; /* Độ rộng tối đa là 100% của container cha */
+  }
+  

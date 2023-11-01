@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import PageRender from "./PageRender";
 import { Empty } from "antd";
 import NotFound from "./components/global/NotFound";
-import { Login, Root, PictureForFun } from "./pages";
+import { Login, Root, PictureForFun, GameBauCua } from "./pages";
 import { TodoList } from "./components";
 
 const router = createBrowserRouter([
@@ -23,6 +23,12 @@ const router = createBrowserRouter([
   {
     path: "/note",
     element: <Root Component={<TodoList></TodoList>}/>,
+    errorElement: <NotFound></NotFound>,
+    
+  },
+  {
+    path: "/baucua",
+    element: <Root Component={<GameBauCua></GameBauCua>}/>,
     errorElement: <NotFound></NotFound>,
     
   },

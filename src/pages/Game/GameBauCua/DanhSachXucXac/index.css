@@ -1,0 +1,15 @@
+/* styles.css */
+.dice-container {
+    width: 100%; /* Sử dụng 100% độ rộng của class bên trong (col-6) */
+    max-width: 200px; /* Độ rộng tối đa của cái đĩa/xúc xắc */
+    margin: 0 auto; /* Để căn giữa theo chiều ngang */
+    background-color: white;
+    border-radius: 50%; /* Để làm cho hình ảnh tròn */
+  }
+  
+  /* Để làm cho hình ảnh trong "dice-container" tràn đều ra */
+  .dice-container .child {
+    width: 100%;
+    height: auto;
+  }
+  
