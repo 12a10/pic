@@ -4,8 +4,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import PageRender from "./PageRender";
 import { Empty } from "antd";
 import NotFound from "./components/global/NotFound";
-import { Login, Root, PictureForFun, GameBauCua } from "./pages";
+import { Login, Root, PictureForFun, GameBauCua, Register } from "./pages";
 import { TodoList } from "./components";
+import RegisterForm from "./pages/Register";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login />,
+    errorElement: <NotFound></NotFound>,
+  }, {
+    path: "/register",
+    element: <Register />,
     errorElement: <NotFound></NotFound>,
   },
   {
